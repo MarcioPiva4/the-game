@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="/public/js/anime.min.js" defer></script>~
+  <script src="/public/js/main.js" defer></script>
+  <script src="/public/js/audio.js" defer></script>
+  <title>The Game</title>
+</head>
+
+<body>
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="/public/music/main.mp3" type="audio/mpeg" >
+  </audio>
+
+  <section class="game-section-menu">
+    <h1 class="title">The Game</h1>
+    <div class="game-menu">
+      <ul>
+        <input type="text" name="name" id="name" placeholder="seu nome">
+        <li id="play">Jogar</li>
+        <li id="config">Configurações</li>
+      </ul>
+    </div>
+
+    <p>Max e min: 2 jogadores</p>
+    <p>Conectado(s): <span class="connects">carregando...</span></p>
+    <p>Espectador(es): <span class="players">carregando...</span></p>
+  </section>
+
+  <section class="game-section-menu-config">
+    <h1 class="title-config">Configurações</h1>
+    <div class="content-config">
+      <label for="volumeControl" class="label-volume">
+        <p>Volume</p>
+        <button id="volume-mute">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 1H8V15H6L2 11H0V5H2L6 1Z" fill="#ffff"/>
+            <path d="M14 8C14 5.79086 12.2091 4 10 4V2C13.3137 2 16 4.68629 16 8C16 11.3137 13.3137 14 10 14V12C12.2091 12 14 10.2091 14 8Z" fill="#fff"/>
+            <path d="M12 8C12 9.10457 11.1046 10 10 10V6C11.1046 6 12 6.89543 12 8Z" fill="#fff"/>
+          </svg> 
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="disable">
+            <path d="M8 1H6L2 5H0V11H2L6 15H8V1Z" fill="#fff"/>
+            <path d="M9.29289 6.20711L11.0858 8L9.29289 9.79289L10.7071 11.2071L12.5 9.41421L14.2929 11.2071L15.7071 9.79289L13.9142 8L15.7071 6.20711L14.2929 4.79289L12.5 6.58579L10.7071 4.79289L9.29289 6.20711Z" fill="#fff"/>
+          </svg>
+        </button>
+        <input id="volumeControl" type="range" min="0" max="1" step="0.01" value="1"/>
+      </label>
+
+      <button id="back">Voltar</button>
+    </div>
+  </section>
+
+  <section class="game-section">
+    <div class="game">
+      <div class="player-1">
+        <p class="name-player-1"></p>
+      </div>
+
+      <div class="player-2">
+        <p class="name-player-2"></p>
+      </div>
+    </div>
+
+    <div class="bar-informations">
+      <p class="time"><span>00</span> : <span>00</span></p>
+    </div>
+  </section>
+</body>
+
+</html>
